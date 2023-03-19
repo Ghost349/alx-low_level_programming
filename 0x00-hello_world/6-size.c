@@ -32,4 +32,4 @@ printf("char is %21d bytes \n", sizeof(char));
 printf("char * is %21d bytes \n", sizeof(char *));
 printf("unsigned char is %21d bytes \n", sizeof(unsigned char));
 return (0);
-;}
+}
