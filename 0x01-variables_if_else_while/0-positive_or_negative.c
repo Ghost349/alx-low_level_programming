@@ -1,16 +1,13 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
- /**
-  * main - using the program to assign a number the variable n
-  * return (1) (success)
-  * return (0) (neutral/draw)
-  * return (-1) (failure)
-  */
+/**
+* main - Using the program to assign a number the variable n
+* Return:(0) (success)
+*/
 int main(void)
 {
-
-	int n;
+int n;
 
 srand(time(0));
 n = rand() - RAND_MAX / 2;
