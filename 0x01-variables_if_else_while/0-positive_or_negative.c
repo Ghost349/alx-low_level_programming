@@ -7,7 +7,7 @@
   * return (0) (neutral/draw)
   * return (-1) (failure)
   */
-int main()
+int main(void)
 {
 
 	int n;
