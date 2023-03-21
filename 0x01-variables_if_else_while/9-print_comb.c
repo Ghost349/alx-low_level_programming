@@ -5,15 +5,16 @@
  */
 int main(void)
 {
-int n;
+int x;
 
-for (n = 0 ; n <= 10; n++)
-
+for (x = 48; x < 58; x++)
 {
-putchar(n + '0');
-if (n < 9)
-putchar(',');
-putchar(' ');
+putchar(x);
+if (x < 57)
+{
+putchar(44);
+putchar(32);
+}
 }
 putchar('\n');
 return (0);
