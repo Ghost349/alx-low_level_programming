@@ -11,35 +11,39 @@
 int **alloc_grid(int width, int height)
 {
 	int **max;
-
-	int dis;
-	int ash;
+	int eden;
+	int will;
 
 	if (width <= 0 || height <= 0)
+		return (NULL);
 
-	return (NULL);
 	max = malloc(height * sizeof(int *));
+
 	if (max == NULL)
-	return (NULL);
-	dis = 0;
-	for (; dis < height; dis++)
+		return (NULL);
+
+	for (eden = 0; eden < height; eden++)
 	{
-	max[dis] = malloc(width * sizeof(int *));
-	if (max[dis] == NULL)
-	{
-	dis = 0;
-	for (; dis >= 0; dis--)
-	free(max[dis]);
-	free(max);
-	return (NULL);
+		max[eden] = malloc(width * sizeof(int));
+
+		if (max[eden] == NULL)
+		{
+			eden = 0;
+
+			for (; eden >= 0; eden--)
+				free(max[eden]);
+
+			free(max);
+			return (NULL);
+		}
 	}
-	}
-	for (dis = 0; dis < height; dis++)
+
+	for (eden = 0; eden < height; eden++)
 	{
-	for (ash = 0; ash < width; ash++)
-	{
-	max[dis][ash] = 0;
-	}
+		for (will = 0; will < width; will++)
+		{
+			max[eden][will] = 0;
+		}
 	}
 	return (max);
 }
