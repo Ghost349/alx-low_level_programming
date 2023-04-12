@@ -44,25 +44,7 @@ char *str_concat(char *s1, char *s2)
 
 	while (s1[kez] != '\0')
 
-	{
-
-	link[kez] = s1[kez];
-
 	kez++;
-
-}
-
-	while (s2[lor] != '\0')
-
-	{
-
-	link[kez] = s2[lor];
-
-	kez++, lor++;
-
-	}
-
-	link[kez] = '\0';
 
 	return (link);
 }
