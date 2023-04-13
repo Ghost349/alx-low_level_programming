@@ -1,6 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
-
+#include <unistd.h>
 /**
  * alloc_grid - nested loop to make grid
  * @width: width input
