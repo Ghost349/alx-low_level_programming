@@ -1,19 +1,13 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * _atoi - converts a string to an integer
- * @s: string to be converted
+ * _atoi -a function that converts a string to an integer
+ * @s: string to be converted into an integer
  * Return: the int converted from the string
  */
 int _atoi(char *s)
 {
-	int max = 0;
-
-	bob = 0;
-	t = 0;
-	len = 0;
-	g = 0;
-	git = 0;
+	int max, bob, t, len, g, git = 0;
 
 	while (s[len] != '\0')
 	len++;
@@ -39,23 +33,23 @@ int _atoi(char *s)
 	return (t);
 }
 /**
- * main - multiplies two numbers
+ * main - a function that multiplies two numbers
  * @argc: number of arguments
  * @argv: array of arguments
  * Return: 0 (Success), 1 (Error)
  */
 int main(int argc, char *argv[])
 {
-	int result, num1, num2;
+	int result, num3, num4;
 
 	if (argc < 3 || argc > 3)
 	{
 	printf("Error\n");
 	return (1);
 	}
-	num1 = _atoi(argv[1]);
-	num2 = _atoi(argv[2]);
-	result = num1 * num2;
+	num3 = _atoi(argv[1]);
+	num4 = _atoi(argv[2]);
+	result = num3 * num4;
 	printf("%d\n", result);
 	return (0);
 }
