@@ -9,7 +9,7 @@ void free_listint2(listint_t **head)
 	listint_t *max;
 
 	if (head == NULL)
-	return ;
+	return;
 	while (*head)
 	{
 	max = (*head)->next;
