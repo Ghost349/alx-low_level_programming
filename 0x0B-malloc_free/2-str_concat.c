@@ -12,13 +12,13 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *conct;
-	int red = 0;
-	int gin = 0;
+	int red;
+	int gin;
 
 	if (s1 == NULL)
-		return ("");
+		s1 = "";
 	if (s2 == NULL)
-		return ("");
+		s2 = "";
 
 	red = gin = 0;
 	while (s1[red] != '\0')
@@ -28,11 +28,11 @@ char *str_concat(char *s1, char *s2)
 
 	while (s2[gin] != '\0')
 		gin++;
-
-	conct = malloc(sizeof(char) * (red + gin + 1));
+	conct = malloc((red + gin + 1) * sizeof(char));
 
 	if (conct == NULL)
 		return (NULL);
+
 	gin = red = 0;
 	while (s1[red] != '\0')
 	{
@@ -42,7 +42,7 @@ char *str_concat(char *s1, char *s2)
 	while (s2[gin] != '\0')
 	{
 		conct[red] = s2[gin];
-	red++, gin++;
+		gin++, red++;
 	}
 	conct[red] = '\0';
 	return (conct);
