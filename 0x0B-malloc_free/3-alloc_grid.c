@@ -12,7 +12,7 @@
 int **alloc_grid(int width, int height)
 {
 	int **pointer;
-	int eden;
+	int str_len;
 	int will;
 
 	if (width <= 0 || height <= 0)
@@ -23,30 +23,30 @@ int **alloc_grid(int width, int height)
 	if (pointer == NULL)
 		return (NULL);
 
-	eden = 0;
-	for (; eden < height; eden++)
+	str_len = 0;
+	for (; str_len < height; str_len++)
 	{
-		pointer[eden] = malloc(width * sizeof(int));
+		pointer[str_len] = malloc(width * sizeof(int));
 
-		if (pointer[eden] == NULL)
+		if (pointer[str_len] == NULL)
 		{
-			eden = 0;
+			str_len = 0;
 
-			for (; eden >= 0; eden--)
-				free(pointer[eden]);
+			for (; str_len >= 0; str_len--)
+				free(pointer[str_len]);
 
 			free(pointer);
 			return (NULL);
 		}
 	}
 
-	eden = 0;
-	for (; eden < height; eden++)
+	str_len = 0;
+	for (; str_len < height; str_len++)
 	{
 		will = 0;
 		for (; will < width; will++)
 		{
-			pointer[eden][will] = 0;
+			pointer[str_len][will] = 0;
 		}
 	}
 	return (pointer);
