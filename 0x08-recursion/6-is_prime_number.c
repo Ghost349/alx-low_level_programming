@@ -1,6 +1,6 @@
 #include "main.h"
 
-int actual_prime(int n, int m);
+int prime(int n, int m);
 /**
 *is_prime_number- a function returning 1 if an integer is a prime number
  *@n: number to evaluate
@@ -11,20 +11,21 @@ int is_prime_number(int n)
 {
 	if (n <= 1)
 		return (0);
-	return (actual_prime(n, n - 1));
+	return (prime(n, n - 1));
 }
+
 /**
- * actual_prime - Determines if a number is prime recursively
- * @n: number to evaluate
- * @m: iterator
+ * prime - prime number recursively.
+ * @n: number being used to scan
+ * @m: The one we use to divide n.
  *
- * Return: 1 if n is prime, 0 if not
+ * Return: 1 if number is prime or otherwise return 0.
  */
-int actual_prime(int n, int m)
+int prime(int n, int m)
 {
-	if (n % m == 0 && m > 0)
-		return (0);
 	if (m == 1)
 		return (1);
-	return (actual_prime(n, m - 1));
+	if (n % m == 0 && m > 0)
+		return (0);
+	return (prime(n, m - 1));
 }
