@@ -17,7 +17,7 @@ unsigned int binary_to_uint(const char *b)
 	for (kez = 0; b[kez]; kez++)
 	{
 		dec = 2 * dec + (b[kez] - '0');
-		if (b[kez] > '1' || b[kez] < '0')
+		if (b[kez] < '0' || b[kez] > '1')
 			return (0);
 
 	}
